@@ -1,3 +1,11 @@
+# MAGLI
+
+Originally written by Daniel Schroeder and published at [danielschroeder.me](http://danielschroeder.me/projects/magliv2.html)
+
+The only change I did is compiling only for OS X.
+
+Below is original README file contents
+
 Doing things with this code
   
   In the off-chance that anybody does something nifty with this
