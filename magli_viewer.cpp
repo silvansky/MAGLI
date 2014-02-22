@@ -247,7 +247,7 @@ void recursiveCircles(GLfloat radius, GLfloat startingradius, int xd, int yd, in
 			break;
 	}
 
-	GLfloat tempcolor[3] = {xd, yd, zd};
+	GLfloat tempcolor[3] = {static_cast<GLfloat>(xd), static_cast<GLfloat>(yd), static_cast<GLfloat>(zd)};
 	for(int i = 0; i < 3; i++)
 	{
 		tempcolor[i] = 1 - abs(tempcolor[i]) / (4 * startingradius);

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>0B22CAFD-03FD-44EB-A653-4B42624E8913</string>
+	<key>IDESourceControlProjectName</key>
+	<string>MaGLi OSX</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>46807CC5-4722-435B-9ADA-D7BF4D734FDB</key>
+		<string>ssh://github.com/silvansky/MAGLI.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>MaGLi OSX/MaGLi OSX.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>46807CC5-4722-435B-9ADA-D7BF4D734FDB</key>
+		<string>../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>ssh://github.com/silvansky/MAGLI.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>46807CC5-4722-435B-9ADA-D7BF4D734FDB</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>46807CC5-4722-435B-9ADA-D7BF4D734FDB</string>
+			<key>IDESourceControlWCCName</key>
+			<string>magli_snapshot_2011-11-30</string>
+		</dict>
+	</array>
+</dict>
+</plist>

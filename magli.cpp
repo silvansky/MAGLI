@@ -527,6 +527,8 @@ bool MaGLi::setAttachedIndexSeedFBO(int index)
 	glFramebufferTexture2DEXT(GL_FRAMEBUFFER_EXT, GL_COLOR_ATTACHMENT0_EXT,
 		GL_TEXTURE_2D, seedTextures[index], 0);
 	glBindFramebufferEXT(GL_FRAMEBUFFER_EXT, lastFBO);
+	
+	return true;
 }
 
 bool MaGLi::setRenderedIndexOneWay(int index)
@@ -612,6 +614,8 @@ bool MaGLi::computeSkews()
 	glFlush();
 	glDrawBuffer(GL_COLOR_ATTACHMENT0_EXT);
 	glBindFramebufferEXT(GL_FRAMEBUFFER_EXT, lastFBO);
+	
+	return true;
 }
 
 GLuint MaGLi::getNearTexture(int stripIndex, bool right)
@@ -850,23 +854,30 @@ bool MaGLi::renderStrip(int stripIndex, bool right, bool useMapTex)
 		? (right ? rightMapTexProgram : leftMapTexProgram)
 		: (right ? rightOneWayProgram : leftOneWayProgram));
 
-	glActiveTexture(GL_TEXTURE0);
+	glActiveTexture(GL_TEXTURE0); // nearTex
 	glBindTexture(GL_TEXTURE_2D, getNearTexture(stripIndex, right));
+
 	glEnable(GL_TEXTURE_2D);
-	glActiveTexture(GL_TEXTURE1);
+	glActiveTexture(GL_TEXTURE1); // farTex
 	glBindTexture(GL_TEXTURE_2D, getFarTexture(stripIndex, right));
+
 	glEnable(GL_TEXTURE_2D);
-	glActiveTexture(GL_TEXTURE2);
+	glActiveTexture(GL_TEXTURE2); // depthTex
 	glBindTexture(GL_TEXTURE_2D, (right ? rightSkewDepth
 		: leftSkewDepth));
+
 	glEnable(GL_TEXTURE_2D);
-	glActiveTexture(GL_TEXTURE3);
+	glActiveTexture(GL_TEXTURE3); // otherDepthTex
 	glBindTexture(GL_TEXTURE_2D, (right ? leftSkewDepth
 		: rightSkewDepth));
+
+
 	glEnable(GL_TEXTURE_2D);
-	glActiveTexture(GL_TEXTURE4);
+	glActiveTexture(GL_TEXTURE4); // gapTex  (??)
 	glBindTexture(GL_TEXTURE_2D, (useMapTex ?
 		(right ? rightSkewTexture : leftSkewTexture) : gapTexture));
+
+
 	glEnable(GL_TEXTURE_2D);
 	
 	//uniforms
@@ -1356,6 +1367,8 @@ bool MaGLi::defaultSceneSketcher()
 		glEnd();
 	}
 	glPopMatrix();
+	
+	return true;
 }
 
 bool MaGLi::sketchScene()
