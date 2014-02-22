@@ -2,7 +2,7 @@
 
 Originally written by Daniel Schroeder and published at [danielschroeder.me](http://danielschroeder.me/projects/magliv2.html)
 
-The only change I did is compiling only for OS X.
+I made it compilable and runnable under OS X and added an Xcode project to make work with code more comfortable.
 
 Below is original README file contents
 
